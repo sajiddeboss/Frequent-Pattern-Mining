@@ -3,7 +3,7 @@ Apriori algorithm:
 - This approach is used to find the dataset's most frequent item sets and allows us to derive 
 association rules from them. It employs prior knowledge of frequent items and utilizes an 
 iterative strategy to find K+1 item sets from a set of K frequent things. The Apriori 
-algorithm's main idea is that all subsets of a frequent itemset must also be frequent. [1]
+algorithm's main idea is that all subsets of a frequent itemset must also be frequent. 
 FP growth algorithm: 
 - To solve the shortcoming of the Apriori method, the Frequent pattern algorithm uses a 
 divide-and-conquer strategy to locate the most frequent pattern in the dataset by creating 
@@ -52,11 +52,12 @@ this is repeated for all the items in the header table.
 4. Return the frequent pattern which has higher support than the user defined minimum 
 support.
 
-REFERENCES
-[1]. https://www.geeksforgeeks.org/apriori-algorithm/
-[2]. Jiawei Han, Micheline Kamber and Jian Pei- Data Mining: Concepts and Techniques, 3rd ed.
-[3]. http://archive.ics.uci.edu/ml/datasets/Adult
-[4]. https://github.com/LittleWindCoat/UCI-Adult-Census-Dataset-Algorithm-Implementation
-[5]. https://github.com/zHaytam/AprioriAlgorithm/blob/master/apriori.py
-[6].https://towardsdatascience.com/fp-growth-frequent-pattern-generation-in-data-mining-withpython-implementation-244e561ab1c
+Dataset used to test the algorithms: 
+To perform the frequent Itemset mining, we use UCI adult dataset. It consists of 32562 entries 
+and 15 columns. Since we are interested in find the frequent pattern, in the data preprocessing step 
+we remove all the rows with null values and also drop the columns with numerical values. Hence 
+after the data cleaning step, we get a dataset of size 32561*9 which is fed into the pattern mining 
+algorithm. Ronny Kohavi and Barry Becker collected this information from the 1994 Census 
+Bureau database (Data Mining and Visualization, Silicon Graphics). The aim is to forecast whether 
+a person earns more than $50,000 per year.(http://archive.ics.uci.edu/ml/datasets/Adult)
 
